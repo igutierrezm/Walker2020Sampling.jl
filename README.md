@@ -5,7 +5,7 @@
 [![Build Status](https://github.com/igutierrezm/Walker2020Sampling.jl/workflows/CI/badge.svg)](https://github.com/igutierrezm/Walker2020Sampling.jl/actions)
 [![Codecov](https://codecov.io/gh/igutierrezm/Walker2020Sampling.jl/branch/master/graph/badge.svg?token=oGQ0PYvaRZ)](https://codecov.io/gh/igutierrezm/Walker2020Sampling.jl)
 
-Sampling from a univariate unnormalized [pdf](https://en.wikipedia.org/wiki/Probability_density_function) in Julia using Walker's MCMC algorithm, see Li \& Walker (2020) for details.
+Sampling from a univariate unnormalized [pdf](https://en.wikipedia.org/wiki/Probability_density_function) in Julia using Li \& Walker's MCMC algorithm, see [1] for details.
 
 ## Installation
 
@@ -51,4 +51,4 @@ Be aware that both `rng` and `s` are modified in the process.
 
 ## References
 
-Li, Y. and Walker, S. G. (2020). A latent slice sampling  algorithm. arXiv e-prints, page arXiv:[2010.08509](https://arxiv.org/abs/2002.06212).
+[1] Li, Y. and Walker, S. G. (2020). A latent slice sampling  algorithm. arXiv e-prints, page arXiv:[2010.08509](https://arxiv.org/abs/2002.06212).
