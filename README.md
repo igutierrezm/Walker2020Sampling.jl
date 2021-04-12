@@ -35,7 +35,7 @@ using Random, Walker2020Sampling
 rng = MersenneTwister(1)
 ```
 
-Then, we create a sampler `s` with parameter `k` using `Walker2014Sampler()`:
+Then, we create a sampler `s` with parameter `k` using `Walker2020Sampler()`:
 
 ```julia
 s = Walker2020Sampler(; θ, lb, ub);
