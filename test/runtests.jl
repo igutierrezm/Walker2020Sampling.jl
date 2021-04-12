@@ -4,7 +4,7 @@ using Random
 using Test
 
 @testset "Walker2020Sampling.jl" begin
-    s = Walker2020Sampler(lb = 0.0, ub = 1.0)
+    s = Walker2020Sampler(lb = 0.1, ub = 1.0)
     rng = MersenneTwister(1)
     y0, z0 = 1.0, 1.0
     for i = 1:100
