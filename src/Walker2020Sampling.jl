@@ -22,7 +22,7 @@ end
 """
     Walker2020Sampler(θ::Float64; lb::FLoat64 = -Inf, ub::Float64 = Inf)
 
-The sampler proposed by Li & Walker (2020), with parameter `θ`, for a target distribution with support `[lb, ub]`.
+Li & Walker's sampler with parameter `θ` for a target distribution with support `[lb, ub]`.
 """
 function Walker2020Sampler(θ::Float64; lb::Float64 = -Inf, ub::Float64 = +Inf)
     Walker2020Sampler(θ, lb, ub)
