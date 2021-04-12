@@ -51,4 +51,4 @@ Be aware that both `rng` and `s` are modified in the process.
 
 ## References
 
-[1] Li, Y. and Walker, S. G. (2020). A latent slice sampling  algorithm. arXiv e-prints, page arXiv:[2010.08509](https://arxiv.org/abs/2002.06212).
+[1] Li, Y. and Walker, S. G. (2020). A latent slice sampling  algorithm. arXiv e-prints, page arXiv:[2010.08509](https://arxiv.org/abs/2010.08509).
