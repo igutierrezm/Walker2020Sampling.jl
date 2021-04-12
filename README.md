@@ -9,7 +9,6 @@ Sampling from a univariate unnormalized [pdf](https://en.wikipedia.org/wiki/Prob
 
 ## Installation
 
-
 Install with the Julia package manager Pkg:
 
 ```julia
@@ -26,7 +25,7 @@ julia> Pkg.add("https://github.com/igutierrezm/Walker2020Sampling.jl")
 
 ## Usage
 
-Suppose we want to draw the next state in a [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) with target (unnormalized) log-pdf `q()` using Li \& Walker's algorithm with parameter `θ`. Suppose further that the support of `q()` is `[lb, ub]` and the current state is `xold`.
+Suppose we want to draw the next state in a [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) with target (unnormalized) log-pdf `q()` using Li \& Walker's algorithm with parameter `θ`. Suppose further that the support of `q()` is `[lb, ub]`, the current state of the main variable is `y0`, and the current state of the auxiliary variable is `z0`.
 
 The first step is to set up the environment:
 
@@ -41,10 +40,10 @@ Then, we create a sampler `s` with parameter `k` using `Walker2020Sampler()`:
 s = Walker2020Sampler(; θ, lb, ub);
 ``` 
 
-Finally, we draw the next state using `rand()`:
+Finally, we draw the next state and auxiliary value using `rand()`:
 
 ```julia
-xnew = rand(rng, s, q, xold);
+y1, z1 = rand(rng, s, q, y0, z0);
 ``` 
 
 Be aware that both `rng` and `s` are modified in the process. 
