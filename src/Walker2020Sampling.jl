@@ -31,7 +31,7 @@ end
 """
     rand(rng::AbstractRNG, s::Walker2014Sampler, q::Function, y0, z0)
 
-Draw the next value in a MCMC with target unnormalized log-pdf `q` using the sampler `s`, assuming that the current state of the main variable is `y0` and the current state of the auxiliary variable is `z0`. Both `rng` and `s` are modified in the process.
+Draw the next state in a MCMC with target unnormalized log-pdf `q` using the sampler `s`, assuming that the current state of the main variable is `y0` and the current state of the auxiliary variable is `z0`. Both `rng` and `s` are modified in the process.
 """
 function rand(
         rng::AbstractRNG, 
