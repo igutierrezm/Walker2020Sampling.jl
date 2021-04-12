@@ -13,21 +13,25 @@ export
     rand,
     Walker2020Sampler
 
+struct Walker2020Sampler
+    θ::Float64
+    lb::Float64
+    ub::Float64
+end
+
 """
-    Walker2020Sampler(; θ::Float64 = 20, lb::FLoat64 = -Inf, ub::Float64 = Inf)
+    Walker2020Sampler(θ::Float64; lb::FLoat64 = -Inf, ub::Float64 = Inf)
 
 The sampler proposed by Li & Walker (2020), with parameter `θ`, for a target distribution with support `[lb, ub]`.
 """
-Base.@kwdef struct Walker2020Sampler
-    lb::Float64 = -Inf
-    ub::Float64 = +Inf
-    θ::Float64  = 20.0
+function Walker2020Sampler(θ::Float64; lb::Float64 = -Inf, ub::Float64 = +Inf)
+    Walker2020Sampler(θ, lb, ub)
 end
 
 """
     rand(rng::AbstractRNG, s::Walker2014Sampler, q::Function, y0, z0)
 
-Draw the next value in a MCMC with target unnormalized log-pdf `q` using the sampler `s`, assuming that the current values of the main and auxiliary variables are `y0` and `z0`, respectively. Both `rng` and `s` are modified in the process.
+Draw the next value in a MCMC with target unnormalized log-pdf `q` using the sampler `s`, assuming that the current state of the main variable is `y0` and the current state of the auxiliary variable is `z0`. Both `rng` and `s` are modified in the process.
 """
 function rand(
         rng::AbstractRNG, 

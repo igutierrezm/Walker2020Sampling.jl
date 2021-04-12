@@ -37,10 +37,10 @@ rng = MersenneTwister(1)
 Then, we create a sampler `s` with parameter `k` using `Walker2020Sampler()`:
 
 ```julia
-s = Walker2020Sampler(; θ, lb, ub);
+s = Walker2020Sampler(θ; lb, ub);
 ``` 
 
-Finally, we draw the next state and auxiliary value using `rand()`:
+Finally, we draw the next state of the main and auxiliary variables using `rand()`:
 
 ```julia
 y1, z1 = rand(rng, s, q, y0, z0);
