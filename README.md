@@ -26,7 +26,7 @@ julia> Pkg.add("https://github.com/igutierrezm/Walker2020Sampling.jl")
 
 ## Usage
 
-Suppose we want to draw the next state in a [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) with target (unnormalized) log-pdf `q()` using Walker's algorithm with parameter `θ`. Suppose further that the support of `q()` is `[lb, ub]` and the current state is `xold`.
+Suppose we want to draw the next state in a [MCMC](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) with target (unnormalized) log-pdf `q()` using Li \& Walker's algorithm with parameter `θ`. Suppose further that the support of `q()` is `[lb, ub]` and the current state is `xold`.
 
 The first step is to set up the environment:
 
