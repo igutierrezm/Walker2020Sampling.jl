@@ -9,18 +9,18 @@ Sampling from a univariate unnormalized [pdf](https://en.wikipedia.org/wiki/Prob
 
 ## Installation
 
-Install with the Julia package manager Pkg:
+Install with the Julia package manager Pkg, just like any other registered Julia package:
 
 ```julia
 # Press ']' to enter the Pkg REPL mode.
-pkg> add https://github.com/igutierrezm/Walker2020Sampling.jl  
+pkg> add Walker2020Sampling
 ```
 
 or
 
 ```julia
 julia> using Pkg; 
-julia> Pkg.add("https://github.com/igutierrezm/Walker2020Sampling.jl")
+julia> Pkg.add("Walker2020Sampling")
 ```
 
 ## Usage
